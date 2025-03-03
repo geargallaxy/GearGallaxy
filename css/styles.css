@@ -1,0 +1,284 @@
+/* General Reset: Ensure body and html take full height */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('../images/gallaxy beige.avif') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    color: white;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-section h1 {
+    font-size: 6vw; /* Responsive font size based on viewport width */
+    font-weight: 800; /* Bold text */
+    font-family: 'Arial Black', sans-serif; /* Custom font */
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+    background: linear-gradient(to bottom, #000000, #d3d3d3); /* Gradient text */
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero-section p.lead {
+    color: #000000;
+    font-family: 'Arial', sans-serif;
+    font-size: 2vw; /* Use viewport width for paragraph scaling */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+}
+
+/* Clients Page Styles */
+.clients-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f8f9fa;
+}
+
+.clients-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Clients Grid */
+.clients-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Individual Client Card */
+.client-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    max-width: 100%;
+}
+
+.client-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    max-width: 100%;
+}
+
+.client-card h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #222;
+}
+
+.client-card p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Hover Effect */
+.client-card:hover {
+    transform: scale(1.05);
+}
+
+/* For the Designs Section (Similar to Client Cards) */
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect for Designs */
+.card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* For NavBar */
+.navbar {
+    font-size: 1.1rem; /* Increase font size for navbar */
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+    font-size: 1.1rem; /* Ensure consistent font sizing */
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+  }
+
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: transparent;
+    width: 60px;  /* Set fixed size */
+    height: 60px; /* Set fixed size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;  /* Ensures it stays above everything */
+}
+
+/* WhatsApp logo inside the floating button */
+.whatsapp-float img {
+    width: 100%;  /* Ensure image fills the button */
+    height: auto;
+    max-width: 50px;  /* Prevent it from becoming too large */
+    display: block;  /* Removes extra space below the image */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        background-position: center top;
+        padding: 20px;
+        height: 100vh;
+    }
+
+    .hero-section h1 {
+        font-size: 10vw; /* Scale down the font for mobile */
+    }
+
+    .hero-section p.lead {
+        font-size: 3vw; /* Adjust paragraph font size for mobile */
+    }
+
+    .hero-section a.btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .clients-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .whatsapp-float img {
+        max-width: 40px; /* Reduce the size of the logo */
+    }
+
+    footer {
+        padding: 8px 0;
+        font-size: 0.8rem !important;
+    }
+
+    .navbar-brand, .navbar-nav .nav-link {
+        font-size: 1rem; /* Increase font size in mobile view */
+    }
+
+    .clients-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .btn:hover {
+        transform: scale(1.05);
+        transition: 0.3s ease-in-out;
+      }
+    
+}
+
+/* Additional styles for larger screens */
+@media (min-width: 1024px) {
+    /* Header, Navbar, and Footer Adjustments */
+    header {
+        padding: 20px 0;
+    }
+
+    .navbar-brand, .navbar-nav .nav-link {
+        font-size: 1.25rem; /* Increase font size for the navbar */
+    }
+
+    footer {
+        padding: 20px 0;
+        font-size: 1.2rem; /* Increase footer font size */
+    }
+
+    .hero-section {
+        padding: 50px 20px;
+        height: auto; /* Allow height to adjust */
+    }
+
+    .hero-section h1 {
+        font-size: 7vw; /* Scale for larger screens */
+    }
+
+    .hero-section p.lead {
+        font-size: 1.9vw; /* Scale paragraph font for larger screens */
+    }
+
+    .clients-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* More columns for larger screens */
+    }
+
+    .client-card {
+        padding: 25px; /* Add more padding to client cards */
+    }
+
+    .btn:hover {
+        transform: scale(1.05);
+        transition: 0.3s ease-in-out;
+      }
+    
+}
+
+/* Sticky Header */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sticky Footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    margin-top: auto;
+    position: sticky;
+    bottom: 0;
+}
